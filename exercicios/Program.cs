@@ -39,7 +39,7 @@ namespace exercicios
 
             Control controle = new Control();
             controle.menu();
-
+           
             Console.ReadLine(); //Manter o prompt aberto
 
         } // fim da main
