@@ -122,6 +122,11 @@ namespace exercicios
             }
         }
 
+        public string mediaTotal(int result, int quan)
+        {
+            return "A média de todos os números é " + (result / quan);
+        }
+
         public string vogais(string palavra)
         {
             int tamanho = palavra.Length;
@@ -153,18 +158,21 @@ namespace exercicios
 
         }
 
-        bool VerificaNumeroPrimo(int numero)
+        public string VerificaNumeroPrimo(int num)
         {
-            bool ePrimo = true;
-            for (int divisor = 2; divisor <= Math.Sqrt(numero); divisor++)
+            int cont = 0;
+            for (int i = 1; i < num; i++)
             {
-                if (numero % divisor == 0)
+                if (num % i == 0)
                 {
-                    ePrimo = false;
-                    break;
+                    cont = cont + 1;
                 }
             }
-            return ePrimo;
+
+            if ((cont > 2) || (num == 4))
+                return "O número " + num + " NÃO É primo";
+            else
+                 return "O número " + num + " É primo";
         }
 
 

@@ -216,7 +216,33 @@ namespace exercicios
                         } while ((num1 > 0) && (num2 > 0));
                         break;
 
-           
+                    case 9:
+                        int quan = 0;
+                        do
+                        {
+                            int result = 0;
+                            Console.Write("Informe uma quantidade: ");
+                            quan = Convert.ToInt32(Console.ReadLine());
+
+                            for (int i = 0; i < quan; i++)
+                            {
+                                Console.Write("Informe o "+ (i+1)+ "º número: ");
+                                num = Convert.ToInt32(Console.ReadLine());
+                                result = num + result ;
+                            }
+                            if (quan > 0)
+                            {
+                                Console.WriteLine(this.exer.mediaTotal(result,quan));
+                            }
+                            else
+                            {
+                                Console.WriteLine("ERRO, informe um número positivo");
+                            }
+                        } 
+                        while (quan < 0);
+                        break;
+
+
                     case 10:
                    
                             Console.Write("Informe uma palavra: ");
@@ -235,26 +261,11 @@ namespace exercicios
                     break;
 
                     case 12:
-                        Console.Write("Verificando se um número é primo\n");
-                        while(true)
-{
-                            Console.WriteLine("Informe um número até 99998(99999 sai)");
-                            var numero = Int32.Parse(Console.ReadLine());
-                            if (numero == 99999)
-                                break;
+                        Console.Write("Informe um número: ");
+                        num = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine(this.exer.VerificaNumeroPrimo(num));
 
-                            if (numero < 2 || numero > 99998)
-                            {
-                                Console.WriteLine("Número menor que 2 e maior que 1000 não vale");
-                            }
-                            else
-                            {
-                                Console.WriteLine(this.exer.inverter(numero));
-                                Console.WriteLine("O número { 0}  { 1}  primo.\n", numero, resultado ? "É" : "NÃO ");
-                            }
-                        }
-
-
+                        break;
 
                     default:
                         Console.WriteLine("Opção escolhida não é válida");
