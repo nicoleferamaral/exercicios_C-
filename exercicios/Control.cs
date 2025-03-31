@@ -30,7 +30,23 @@ namespace exercicios
                 "\n9. Média" +
                 "\n10. Contar vogais" +
                 "\n11. Palavra invertida" +
-                "\n12. Primo" 
+                "\n12. Primo" +
+                "\n=============  2º ================" +
+                "\n13. Soma mais multiplicação" +
+                "\n14. Média de três números" +
+                "\n15. 15%" +
+                "\n16. 5% e 50%" +
+                "\n17. Quadrado" +
+                "\n18. Velocidade em Km/h" +
+                "\n19. IMC" +
+                "\n20. Desconto de 9%" +
+                "\n21. Desconto de 7%" +
+                "\n22. Volume retangular" +
+                "\n23. Desconto de 27%" +
+                "\n24. Area trapézio" +
+                "\n25. Nota final" +
+                "\n26. Parcela" +
+                "\n27. Consumo de combustível" 
                 );
 
         }// fim do metodo
@@ -266,6 +282,201 @@ namespace exercicios
                         Console.WriteLine(this.exer.VerificaNumeroPrimo(num));
 
                         break;
+                    case 13:
+                
+                        Console.WriteLine("Informe um número: ");
+                        double nume1 = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine("Informe outro número: ");
+                        double nume2 = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine(this.exer.SomarMulti(nume1,nume2));
+
+                        break;
+                    case 14:
+                        Console.WriteLine("Informe o 1º número: ");
+                         double val1 = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Informe o 2º número: ");
+                        double val2 = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Informe o 2º número: ");
+                        double val3 = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine(this.exer.mediaVal(val1, val2, val3));
+                        break;
+                    case 15:
+                        Console.Write("Informe um valor: ");
+                        double nume = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine(this.exer.quinze(nume));
+
+                        break;
+                    case 16:
+                        Console.Write("Informe um valor: ");
+                        nume = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine(this.exer.cincoCinquenta(nume));
+
+                        break;
+
+                    case 17:
+                        Console.Write("Informe um valor: ");
+                        nume1 = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("Informe outro valor: ");
+                        nume2 = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine(this.exer.quadrado(nume1, nume2));
+                        break;
+
+                    case 18:
+                        do
+                        {
+                            Console.Write("Informe uma velocidade em m/s: ");
+                            nume = Convert.ToDouble(Console.ReadLine());
+                            
+                            if (nume > 0)
+                            {
+                                Console.WriteLine(this.exer.km(nume));
+                            }
+                            else
+                            {
+                                Console.WriteLine("ERRO, informe um número positivo");
+                            }
+                        } while (nume < 0);
+                        break;
+                    case 19:
+                        do
+                        {
+                            Console.Write("Informe sua altura: ");
+                            nume1 = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Informe seu peso: ");
+                            nume2 = Convert.ToDouble(Console.ReadLine());
+
+                            if ((nume1 > 0) && (nume2 > 0))
+                            {
+                                Console.WriteLine(this.exer.imc(nume1, nume2));
+                            }
+                            else
+                            {
+                                Console.WriteLine("ERRO, informe um número positivo");
+                            }
+                        } while ((nume1 < 0) || (nume2 < 0));
+                        break;
+
+                    case 20:
+                        Console.Write("Informe um valor: ");
+                        nume = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine(this.exer.desconto9(nume));
+
+                        break;
+
+                    case 21:
+                        Console.Write("Informe um valor: ");
+                        nume = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine(this.exer.desconto7(nume));
+
+                        break;
+                    case 22:
+                        double nume3 = 0;
+                        do
+                        {
+                            Console.Write("Informe o comprimento da caixa: ");
+                            nume1 = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Informe a altura: ");
+                            nume2 = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Informe a largura: ");
+                            nume3 = Convert.ToDouble(Console.ReadLine());
+                            if ((nume1 > 0) && (nume2 > 0)&& (nume3>0))
+                            {
+                                Console.WriteLine(this.exer.volume(nume1, nume2,nume3));
+                            }
+                            else
+                            {
+                                Console.WriteLine("ERRO, informe um número positivo");
+                            }
+                        } while ((nume1 < 0) || (nume2 < 0) || (nume3 < 0));
+                        break;
+
+                    case 23:
+                        Console.Write("Informe um valor: ");
+                        nume = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine(this.exer.desconto27(nume));
+
+                        break;
+                    case 24:
+                        do
+                        {
+                            Console.Write("Informe a Base maior: ");
+                            nume1 = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Informe a Base menor: ");
+                            nume2 = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Informe a altura: ");
+                            nume3 = Convert.ToDouble(Console.ReadLine());
+                            if ((nume1 > 0) && (nume2 > 0) && (nume3 > 0))
+                            {
+                                Console.WriteLine(this.exer.trapezio(nume1, nume2, nume3));
+                            }
+                            else
+                            {
+                                Console.WriteLine("ERRO, informe um número positivo");
+                            }
+                        } while ((nume1 < 0) || (nume2 < 0) || (nume3 < 0));
+                        break;
+
+                    case 25:
+                        Console.WriteLine("Informe Uma nota entre 0 e 10");
+                        nota1 = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Informe Uma nota entre 0 e 10");
+                        nota2 = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Informe Uma nota entre 0 e 10");
+                        nota3 = Convert.ToDouble(Console.ReadLine());
+
+                        //executar
+                        double mediaPonderada = this.exer.mediaPonderada(nota1, nota2, nota3);
+
+                        if (mediaPonderada == -1)
+                        {
+                            Console.WriteLine("Uma ou mais notas estão erradas, digite novamente");
+                        }
+                        else
+                        {
+                            Console.WriteLine("\n\n A média é: " + mediaPonderada);
+                        }
+                        break;
+                    case 26:
+                        do
+                        {
+                            Console.Write("Informe o valor do produto: ");
+                            nume = Convert.ToDouble(Console.ReadLine());
+                          
+                            if (nume > 0)
+                            {
+                                Console.WriteLine(this.exer.parcela(nume));
+                            }
+                            else
+                            {
+                                Console.WriteLine("ERRO, informe um número positivo");
+                            }
+                        } while (nume < 0);
+                        break;
+
+                    case 27:
+                        do
+                        {
+                            Console.Write("Informe a distância total (KM): ");
+                            nume1 = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Informe a quantidade consumida de combustível (Litros): ");
+                            nume2 = Convert.ToDouble(Console.ReadLine());
+                  
+                            if ((nume1 > 0) && (nume2 > 0))
+                            {
+                                Console.WriteLine(this.exer.consumo(nume1, nume2));
+                            }
+                            else
+                            {
+                                Console.WriteLine("ERRO, informe um número positivo");
+                            }
+                        } while ((nume1 < 0) || (nume2 < 0));
+                        break;
+
+
 
                     default:
                         Console.WriteLine("Opção escolhida não é válida");

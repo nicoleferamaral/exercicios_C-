@@ -175,6 +175,101 @@ namespace exercicios
                  return "O número " + num + " É primo";
         }
 
+        public string SomarMulti(double num1, double num2)
+        {
+            double result = (num1 + num2);
+            return "O resultado final da soma entre " + num1+ " + " + num2 + " e da multiplicação " + result + " * " + num1 + " é igual a: " + (result * num1);
+        }
+
+
+        public string mediaVal(double val1, double val2, double val3)
+        {
+            double med = 0.0;
+                med = (val1 + val2 + val3) / 3;
+                return "A média é: "+med;
+          
+        }
+
+        public string quinze(double num)
+        {
+            return "15% de " + num + " é igual a: " + (num * 0.15);
+        }
+
+        public string cincoCinquenta(double num)
+        {
+            return "5% de " + num + " é igual a: " + (num * 0.05)+ "\n50% de " + num + " é igual a: " + (num * 0.50);
+        }
+
+        public string quadrado(double num1, double num2)
+        {
+            double result1 = num1 * num1;
+            double result2 = num2 * num2;
+            return num1 + "² = " + result1 + "\n"+ num2 + "² = " + result2 + "\nA soma dos resultados é: "+ (result1+result2);
+        }
+
+        public string km(double num)
+        {
+            return num + "m/s = " + (num * 3.6) + "km/h";
+        }
+
+        public string imc(double alt, double peso)
+        {
+            double altura = alt * alt;
+            return "Seu IMC é = " + (peso/altura);
+        }
+
+        public string desconto9(double num)
+        {
+            double result = num * 0.09;
+            return num + " com um desconto de 9% = "+ (num-result); 
+        }
+
+        public string desconto7(double num)
+        {
+            double result = num * 0.07;
+            return "7% de "+ num+ " = "+result + "\nCom o desconto = " + (num - result);
+        }
+
+        public string volume(double comp, double alt, double larg)
+        {
+            return "O volume dessa caixa retangular é = "+(comp*alt*larg);
+        }
+
+        public string desconto27(double num)
+        {
+            double result = num * 0.27;
+            return "27% de " + num + " = " + result + "\nCom o desconto = " + (num - result);   
+        }
+
+        public string trapezio(double baseMaior, double baseMenor, double altura)
+        {
+            return "A área do trapézio é = "+(((baseMenor+baseMaior)*altura)/2);
+        }
+
+        public double mediaPonderada(double nota1, double nota2, double nota3)
+        {
+            double med = 0; // instanciando
+            if((nota1>= 0 && nota1 <= 10) && (nota2>=0 && nota2 <= 10) && (nota3>=0 && nota3 <= 10))
+            {
+                double resul1 = nota1 * 2;
+                double resul2 = nota2 * 3;
+                double resul3 = nota3 * 5;
+                med = (resul1 + resul2 + resul3) / 3;
+                return med;
+            }
+            return -1;
+        }
+
+        public string parcela(double num)
+        {
+            double result = num + (num * 0.16);
+            return "O valor total da compra: " + result + "\nO valor de cada parcela em 10x: " + (result / 10);
+        }
+
+        public string consumo(double km, double litros)
+        {
+            return "O consumo médio de combustível foi: " + (km / litros);
+        }
 
     }// fim da classe
 } // Fim do projeto
